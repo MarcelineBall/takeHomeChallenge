@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom'
+
 const Card = ({ title, abstract }) => {
   return(
     <article>
-      <h2>{title}</h2>
+    <Link to={title}>
+    <h2>{title}</h2>
+    </Link>
       <p>{abstract}</p>
     </article>
   )
