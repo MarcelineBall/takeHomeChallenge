@@ -5,7 +5,7 @@ import StoryGallery from '../StoryGallery/StoryGallery'
 import ArticleDetail from '../ArticleDetail/ArticleDetail'
 import retrieveTopStories from '../utils/apiCalls'
 
-function App() {
+const App = () => {
   const [topStories, setTopStories] = useState([])
   const [error, setError] = useState('')
 
@@ -28,7 +28,7 @@ function App() {
     <Switch>
       <Route path='/:title' render={({ match }) => {
         const { title } = match.params
-
+        findStoryByName(title)
       }} />
       <Route exact path ='/' render={() => {
         return(
