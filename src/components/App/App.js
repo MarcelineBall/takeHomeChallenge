@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import './App.css';
 import mockData from '../../mockData'
 import Card from '../Card/Card'
 
-function App() {
+
+const App = () => {
+  const [topStories, setTopStories] = useState('')
   const stories = mockData.map(story => {
     return (
       <Card
