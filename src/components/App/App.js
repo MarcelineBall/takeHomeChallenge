@@ -1,13 +1,18 @@
 import './App.css';
-import { Router, Route, Link } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import StoryGallery from '../StoryGallery/StoryGallery'
 
-const App = () => {
+function App() {
   return (
     <>
     <h1> Popular times </h1>
-
-    <StoryGallery />
+    <Switch>
+      <Route exact path ='/' render={() => {
+        return(
+          <StoryGallery />
+        )
+      }} />
+    </Switch>
     </>
   )
 }
