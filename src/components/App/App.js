@@ -3,14 +3,19 @@ import mockData from '../../mockData'
 import Card from '../Card/Card'
 
 function App() {
-  const titles = mockData.map(story => story.title)
   const stories = mockData.map(story => {
-
+    return (
+      <Card
+      key={Date.now()}
+      section={story.section}
+      title={story.title}
+      abstract={story.abstract} />
+    )
   })
   return (
     <>
     <h1> Popular times </h1>
-    <h2>{titles}</h2>
+    {stories}
     </>
   )
 }
