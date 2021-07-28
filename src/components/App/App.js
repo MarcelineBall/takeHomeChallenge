@@ -1,21 +1,11 @@
 import './App.css';
-import mockData from '../../mockData'
-import Card from '../Card/Card'
+import StoryGallery from '../StoryGallery/StoryGallery'
 
-function App() {
-  const stories = mockData.map(story => {
-    return (
-      <Card
-      key={Date.now()}
-      section={story.section}
-      title={story.title}
-      abstract={story.abstract} />
-    )
-  })
+const App = () => {
   return (
     <>
     <h1> Popular times </h1>
-    {stories}
+    <StoryGallery />
     </>
   )
 }
