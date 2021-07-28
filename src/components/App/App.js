@@ -38,16 +38,16 @@ const App = () => {
             url={currentStory.url}
             uri={currentStory.uri}
             byline={currentStory.byline}
-            item_type={currentStory.item_type}
-            updated_date={currentStory.updated_date}
-            created_date={currentStory.created_date}
-            published_date={currentStory.published_date}
-            material_type_facet={currentStory.material_type_facet}
+            itemType={currentStory.item_type}
+            updatedDate={currentStory.updated_date}
+            createdDate={currentStory.created_date}
+            publishedDate={currentStory.published_date}
+            materialTypeFacet={currentStory.material_type_facet}
             kicker={currentStory.kicker}
-            des_facet={currentStory.des_facet}
-            org_facet={currentStory.org_facet}
-            per_facet={currentStory.per_facet}
-            geo_facet={currentStory.geo_facet}
+            desFacet={currentStory.des_facet}
+            orgFacet={currentStory.org_facet}
+            perFacet={currentStory.per_facet}
+            geoFacet={currentStory.geo_facet}
             multimedia={currentStory.multimedia}
           />
         )
