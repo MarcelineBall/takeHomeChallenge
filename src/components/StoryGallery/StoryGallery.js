@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
 import Card from '../Card/Card'
-import mockData from '../../mockData'
 import retrieveTopStories from '../utils/apiCalls'
 
 const StoryGallery = () => {
   const [topStories, setTopStories] = useState([])
   const [error, setError] = useState('')
-  const [storyList, setStoryList] = useState([])
 
   useEffect(() => {
     retrieveTopStories()
