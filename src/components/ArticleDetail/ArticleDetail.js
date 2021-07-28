@@ -20,8 +20,16 @@ const ArticleDetail = ({ section,
       <article>
         <h2>{title}</h2>
         <p>{byline}</p>
-        <p>Type of Article {section}, {subsection}</p>
         <p>{abstract}</p>
+        <p>Type of Article: {section}, {subsection}</p>
+        <p>{url}</p>
+        <p>{itemType}</p>
+        <p>Published {publishedDate}</p>
+        <p>Last updated {updatedDate}</p>
+        <p>Article created{createdDate}</p>
+        <p>{materialTypeFacet}</p>
+        <p>{kicker}</p>
+        
       </article>
     )
 }
