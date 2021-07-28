@@ -16,7 +16,7 @@ const StoryGallery = () => {
     const stories = data.map(story => {
       return (
         <Card
-        key={Date.now()}
+        key={story.published_date}
         section={story.section}
         title={story.title}
         abstract={story.abstract} />
