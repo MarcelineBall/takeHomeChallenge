@@ -15,7 +15,12 @@ function App() {
     .catch(error => setError('Sorry, there seems to be an issue retrieving the stories'))
   }, [setTopStories]);
 
-  
+  const findStoryByName = (name) => {
+    const foundStory = topStories.find(story => {
+      return story.title === name
+    })
+    return foundStory
+  }
 
   return (
     <>
