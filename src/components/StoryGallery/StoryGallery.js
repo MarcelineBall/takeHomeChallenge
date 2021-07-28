@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Card from '../Card/Card'
 import mockData from '../../mockData'
+import retrieveTopStories from '../../utils/apiCalls'
 
 const StoryGallery = () => {
   const [topStories, setTopStories] = useState('')
+  useEffect(() => {
+    retrieveTopStories()
+      .then(data => setTopStories(data))
+      .catch(error => setError('Sorry, there seems to be an issue retrieving the stories'))
+  })
   const stories = mockData.map(story => {
     return (
       <Card
