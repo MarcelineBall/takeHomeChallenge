@@ -29,7 +29,7 @@ const ArticleDetail = ({ section,
         <p>Article created{createdDate}</p>
         <p>{materialTypeFacet}</p>
         <p>{kicker}</p>
-        
+        <img src={multimedia[2].url} alt={`image by ${multimedia[2].copyright}`}/>
       </article>
     )
 }
