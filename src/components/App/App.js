@@ -28,7 +28,29 @@ const App = () => {
     <Switch>
       <Route path='/:title' render={({ match }) => {
         const { title } = match.params
-        findStoryByName(title)
+        const currentStory = findStoryByName(title)
+        return(
+          <ArticleDetail
+            section={currentStory.section}
+            subsection={currentStory.subsection}
+            title={currentStory.title}
+            abstract={currentStory.abstract}
+            url={currentStory.url}
+            uri={currentStory.uri}
+            byline={currentStory.byline}
+            item_type={currentStory.item_type}
+            updated_date={currentStory.updated_date}
+            created_date={currentStory.created_date}
+            published_date={currentStory.published_date}
+            material_type_facet={currentStory.material_type_facet}
+            kicker={currentStory.kicker}
+            des_facet={currentStory.des_facet}
+            org_facet={currentStory.org_facet}
+            per_facet={currentStory.per_facet}
+            geo_facet={currentStory.geo_facet}
+            multimedia={currentStory.multimedia}
+          />
+        )
       }} />
       <Route exact path ='/' render={() => {
         return(
