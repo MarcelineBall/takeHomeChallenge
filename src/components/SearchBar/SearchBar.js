@@ -5,15 +5,13 @@ const SearchBar = ({ topStories, setTopStories }) => {
 
   const handleSearch = (event) => {
     event.preventDefault()
-    filterTopStories()
+    setTopStories(filterTopStories())
   }
 
   const filterTopStories = () => {
-    console.log(topStories)
     const filteredStories = topStories.filter(story => {
-      return story.title.includes(searchInput)
+      return story.title.toUpperCase().includes(searchInput.toUpperCase())
     })
-    console.log(filteredStories)
     return filteredStories
   }
 
