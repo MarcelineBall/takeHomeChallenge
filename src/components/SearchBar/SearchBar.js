@@ -1,7 +1,21 @@
 import { useState } from 'react'
 
-const SearchBar = () => {
-  [searchInput, setSearchInput] = useState('')
+const SearchBar = ({ topStories, setTopStories }) => {
+  const [searchInput, setSearchInput] = useState('')
+
+  const handleSearch = (event) => {
+    event.preventDefault()
+    filterTopStories()
+  }
+
+  const filterTopStories = () => {
+    console.log(topStories)
+    const filteredStories = topStories.filter(story => {
+      return story.title.includes(searchInput)
+    })
+    console.log(filteredStories)
+    return filteredStories
+  }
 
   return(
     <form>
@@ -12,7 +26,7 @@ const SearchBar = () => {
         value={searchInput}
         onChange={event => setSearchInput(event.target.value)}
       />
-      <button>Search</button>
+      <button onClick={event => handleSearch(event)}>Search</button>
     </form>
   )
 }

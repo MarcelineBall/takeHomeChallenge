@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import StoryGallery from '../StoryGallery/StoryGallery'
 import ArticleDetail from '../ArticleDetail/ArticleDetail'
+import SearchBar from '../SearchBar/SearchBar'
 import retrieveTopStories from '../utils/apiCalls'
 
 const App = () => {
@@ -54,10 +55,16 @@ const App = () => {
       }} />
       <Route exact path ='/' render={() => {
         return(
-          <StoryGallery
-          topStories={topStories}
-          error={error}
-          />
+          <>
+            <SearchBar
+              topStories={topStories}
+              setTopStories={setTopStories}
+            />
+            <StoryGallery
+              topStories={topStories}
+              error={error}
+            />
+          </>
         )
       }} />
     </Switch>
