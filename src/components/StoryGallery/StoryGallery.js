@@ -1,16 +1,6 @@
-import { useState, useEffect } from 'react'
 import Card from '../Card/Card'
-import retrieveTopStories from '../utils/apiCalls'
 
-const StoryGallery = () => {
-  const [topStories, setTopStories] = useState([])
-  const [error, setError] = useState('')
-
-  useEffect(() => {
-    retrieveTopStories()
-    .then(data => setTopStories(data.results))
-    .catch(error => setError('Sorry, there seems to be an issue retrieving the stories'))
-  }, [setTopStories]);
+const StoryGallery = ({ topStories, error }) => {
 
   const allStories = (data) => {
     const stories = data.map(story => {
