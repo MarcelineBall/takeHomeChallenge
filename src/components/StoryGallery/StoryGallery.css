@@ -1,0 +1,8 @@
+.storySection {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+@media screen and (max-width: 725px) {
+  width: 30vw;
+}

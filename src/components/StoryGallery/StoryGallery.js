@@ -1,4 +1,5 @@
 import Card from '../Card/Card'
+import  './StoryGallery.css'
 
 const StoryGallery = ({ topStories, error }) => {
 
@@ -19,7 +20,7 @@ const StoryGallery = ({ topStories, error }) => {
     <>
       {error &&
       <h2>{error}</h2>}
-      <section>{allStories(topStories)}</section>
+      <section className='storySection'>{allStories(topStories)}</section>
     </>
   )
 }
