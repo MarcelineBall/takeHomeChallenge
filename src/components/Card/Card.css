@@ -1,9 +1,22 @@
 .storyCard {
-  width: 20vw;
+  width: 24vw;
 }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 775px) {
   .storyCard{
-    width: 80vw;
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .storyCard{
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .storyCard{
+    width: 95vw;
+    justify: center;
   }
 }

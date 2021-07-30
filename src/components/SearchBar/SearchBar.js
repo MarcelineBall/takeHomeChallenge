@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './SearchBar.css'
 
 const SearchBar = ({ topStories, setTopStories }) => {
   const [searchInput, setSearchInput] = useState('')
@@ -16,7 +17,7 @@ const SearchBar = ({ topStories, setTopStories }) => {
   }
 
   return(
-    <form>
+    <form className='searchBar'>
       <input
         type='text'
         placeholder='Search by title'
