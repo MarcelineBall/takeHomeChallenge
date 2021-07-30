@@ -1,0 +1,10 @@
+.detailPage {
+  margin: 2vh
+}
+@media screen and (max-width: 500px) {
+  .detailPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
