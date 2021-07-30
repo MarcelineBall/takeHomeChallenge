@@ -1,0 +1,11 @@
+.storySection {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 725px) {
+  .storySection {
+    justify-content: space-around;
+  }
+}

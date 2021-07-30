@@ -1,9 +1,8 @@
-.title {
+.searchBar {
   margin: 2vw
 }
-
 @media screen and (max-width: 500px) {
-  .title {
+  .searchBar {
     display: flex;
     justify-content: center;
   }

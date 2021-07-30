@@ -1,3 +1,5 @@
+import './ArticleDetail.css'
+
 const ArticleDetail = ({ section,
   subsection,
   title,
@@ -18,7 +20,7 @@ const ArticleDetail = ({ section,
   multimedia }) => {
 
     return(
-      <article>
+      <article className='detailPage'>
         <h2>{title}</h2>
         <p>{byline}</p>
         <p>{abstract}</p>

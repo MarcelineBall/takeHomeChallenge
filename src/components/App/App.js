@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <>
-    <h1> Popular times </h1>
+    <h1 className='title'> Popular times </h1>
     <Switch>
       <Route path='/:title' render={({ match }) => {
         const { title } = match.params
